@@ -108,6 +108,13 @@ export default class WebPlayer extends EventEmitter {
     }
   }
 
+  getImageTracks() {
+    if (this.tech) {
+      const imageTracks: any[] = this.tech.getImageTracks();
+      return imageTracks;
+    }
+  }
+
   play(): Promise<boolean> {
     return this.tech?.play();
   }
