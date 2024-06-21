@@ -176,6 +176,12 @@ export default class DashPlayer extends BaseTech {
     }
   }
 
+  getImageTracks() {
+    if(this.shakaPlayer) {
+      return this.shakaPlayer.getImageTracks();
+    }
+  }
+
   destroy() {
     if (this.shakaPlayer) {
       this.shakaPlayer.destroy();

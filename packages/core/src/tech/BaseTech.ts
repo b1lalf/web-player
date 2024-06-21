@@ -411,6 +411,11 @@ export default class BaseTech extends EventEmitter {
     return videoLevels;
   }
 
+  getImageTracks() {
+    let videoLevels: any[] = [];
+    return videoLevels;
+  }
+
   destroy() {
     this.stop();
     this.video.removeEventListener('timeupdate', this.onTimeUpdate);
